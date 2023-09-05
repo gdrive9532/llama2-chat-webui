@@ -44,7 +44,7 @@ export default function HomePage() {
   );
   const [temp, setTemp] = useState(0.7);
   const [topP, setTopP] = useState(0.9);
-  const [maxTokens, setMaxTokens] = useState(4096);
+  const [maxTokens, setMaxTokens] = useState(800);
 
   const { complete, completion, setInput, input } = useCompletion({
     api: "/api",
