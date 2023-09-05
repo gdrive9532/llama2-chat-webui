@@ -31,7 +31,7 @@ const VERSIONS = [
 ];
 
 export default function HomePage() {
-  const MAX_TOKENS = 4096;
+  const MAX_TOKENS = 8192;
   const bottomRef = useRef(null);
   const [messages, setMessages] = useState([]);
   const [open, setOpen] = useState(false);
@@ -42,9 +42,9 @@ export default function HomePage() {
   const [systemPrompt, setSystemPrompt] = useState(
     "You are a helpful assistant."
   );
-  const [temp, setTemp] = useState(0.75);
+  const [temp, setTemp] = useState(0.7);
   const [topP, setTopP] = useState(0.9);
-  const [maxTokens, setMaxTokens] = useState(800);
+  const [maxTokens, setMaxTokens] = useState(8192);
 
   const { complete, completion, setInput, input } = useCompletion({
     api: "/api",
