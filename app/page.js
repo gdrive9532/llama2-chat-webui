@@ -31,7 +31,7 @@ const VERSIONS = [
 ];
 
 export default function HomePage() {
-  const MAX_TOKENS = 4096;
+  const MAX_TOKENS = 1000000;
   const bottomRef = useRef(null);
   const [messages, setMessages] = useState([]);
   const [open, setOpen] = useState(false);
@@ -44,7 +44,7 @@ export default function HomePage() {
   );
   const [temp, setTemp] = useState(0.7);
   const [topP, setTopP] = useState(0.9);
-  const [maxTokens, setMaxTokens] = useState(4096);
+  const [maxTokens, setMaxTokens] = useState(10000000);
 
   const { complete, completion, setInput, input } = useCompletion({
     api: "/api",
